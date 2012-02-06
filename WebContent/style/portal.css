@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+#top {
+	background-image: url("../images/topbg.jpg");
+	background-repeat: repeat-x;
+	float: left;
+	height: 84px;
+	width: 100%;
+}
+
+#top .topbg {
+	background-image: url("../images/system_top_bg.jpg");
+	background-repeat: no-repeat;
+	float: left;
+	height: 84px;
+	width: 100%;
+}
+
+#top .topbg .user {
+    color: #FFFFFF;
+    float: right;
+    font-size: 12px;
+    line-height: 52px;
+    padding-right: 30px;
+    text-align: right;
+    width: 300px;
+}
+
+#top .topbg .userOption {
+    clear: right;
+    color: #666666;
+    float: right;
+    font-size: 12px;
+    line-height: 32px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+#top .topbg .userOption a {
+    color: #000000;
+    text-decoration: none;
+}

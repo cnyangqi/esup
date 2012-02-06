@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /js/
+Disallow: /style/
+Disallow: /WEB-INF/
+Disallow: /META-INF/
+Disallow: /images/
+Disallow: /common/
+Disallow: /admin/
+Disallow: /index.jsp
+Disallow: /payable/index.action
+Disallow: /receive/index.action
+Disallow: /portal/portal.action
+Disallow: /account/index.action
+Disallow: /datadictionary/index.action

@@ -1,0 +1,222 @@
+/* Design By LB UELab */
+body{font-family:"\5FAE\8F6F\96C5\9ED1",Arial,Simsun,sans-serif;color:#808080;font-size: 12px;}
+ol, ul {list-style: none;}
+:focus {outline: 0;}
+ins,del,i,s {text-decoration: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+h1, h2, h3, h4, h5, h6 {font-family:"\5FAE\8F6F\96C5\9ED1","Times New Roman", Times, serif;}
+a,a:visited{color:#0066cc;text-decoration:none;outline:none;}
+a:hover{color:#f60;}
+a:active{color:#999;}
+.inline,i {display:-moz-inline-stack;display:inline-block;zoom: 1;*display: inline;}
+.red{color: #FE0000;}
+h4{font-size: 20px;height: 34px;line-height: 34px;color: #36699e;border-bottom: 1px solid #ddd;}
+body{background:  #fff url(images/bg.png) center top no-repeat;}
+body#login {background:  #fff center top no-repeat;}
+.header,body#login .header {background: url(images/repeat-x.png);}
+.header a.logo,i.ico-nav,.newlist ul li,.videobar h2,i.act ,i.new{background: url(images/ico.png) no-repeat;}
+.pagewrap {width: 960px;margin: 0 auto;}
+body#login .header { height: 98px;background-position: left top;background-repeat: repeat-x;}
+.header { height: 100px;background-position: left -164px;background-repeat: repeat-x;}
+.header a.logo{float: left;position: relative;background-position: left -192px;background-repeat: no-repeat;width: 160px;height: 57px;top: 24px;left: 12px;text-indent: -9999px;}
+.topnav {display: inline;float: right;margin: 33px 5px 0 0;text-align: right;}
+body#login .topnav {margin: 21px 5px 0 0;}
+.topnav ul li {float: left;margin-right: 20px;}
+.topnav ul li.last {margin-right: 0;}
+.topnav i.ico-nav {width: 48px;height: 48px;background-repeat: no-repeat;}
+.topnav i.icoindex {background:none}
+.topnav i.icoreg { background:none}
+.topnav i.icohelp {background:none}
+.topnav i.icodown {background:none}
+.topnav a,.topnav a:visited,.topnav a:hover,.topnav a:active{color: #404040;font-size: 16px;}
+.topnav a span{position: relative;top: 12px;margin-left: 5px; color:#06C; border:none; font-size:20px; font-weight:bold}
+.content {padding: 30px;overflow: hidden;}
+body#login .content {padding: 0;}
+.infologin {background: url(images/logbox.jpg) left top no-repeat;width: 960px;height: 423px;}
+.leftside {float: left;width: 504px;overflow: hidden;}
+.regleft {width: 294px;}
+.rightside {float: right;width: 395px;overflow: hidden;position: relative;border-left: 1px dotted #BCD2E0;}
+.regright {width: 600px;}
+/*login*/
+.infologin .link a {float: left;display: block;width: 540px;height: 330px;position: relative;top: 35px;left: 5px;}
+.loginbox {float: right;position: relative;right: 0;top: 120px;width: 358px;height: 185px;}
+.loginbox .field {padding-top: 12px;}
+.loginbox .field label {display: inline-block; padding-right: 8px;text-align: right;font-size: 14px;width: 102px;color: #fff;font-weight: bold;}
+.loginbox .login-text { border: 1px solid #8dcfe7; height: 21px;line-height: 21px;font-size: 14px;color: #404040;margin-right: 3px;padding: 2px 3px;vertical-align: middle;width: 171px;}
+.loginbox .gologin {overflow: hidden;padding: 12px 0 0 114px;}
+.loginbox .gologin a{color: #fff;text-decoration:underline;}
+/*infolist*/
+.infolist {margin-top: 26px;}
+.protext {float: left;color: #808080;width: 550px;}
+.protext h3,h3{color: #414141;font-size: 16px;border-bottom: 1px solid #ddd;height: 30px;line-height: 30px;}
+.protext p{line-height: 24px;word-spacing : 10px;font-size: 14px;text-indent: 26px;}
+.activities {float: right;margin-left: 19px;width: 381px;border: 1px solid #ddd;}
+.activities h3{border-bottom: 1px solid #ddd;font-size: 16px;height: 35px;line-height: 35px;color: #404040;padding: 0 0 0 10px;}
+i.act {position: relative;top: 3px;right: 8px;width: 12px;height: 14px;background-position: -24px top;}
+.newlist{padding: 10px 7px 25px 15px;}
+.newlist ul li{background-position: -192px -355px;height: 25px;line-height: 25px;padding-left: 10px;}
+.newlist ul li a{color: #808080;}
+i.new {float: none;position: relative;left: 10px;width: 25px;height: 9px;background-position: left -18px;}
+/*reg*/
+.regarea{width: 563px;padding-left: 40px;}
+.regarea h4.reg small{font-size: 12px;}
+.regarea h4.reg .gray {position: relative;top: 13px;}
+.regbox{margin-top: 25px;position: relative;}
+.tips {float: right;position: absolute;right: 0;top: -10px;padding: 5px;background: #fffde6;border: 1px solid #fdb559;width: 255px;cursor: pointer;}
+.tips i {float: right;position: relative;top: -35px;right: 40px;width: 11px;height: 12px;background: url(images/ico.png) -1px -281px no-repeat;}
+.form li {padding: 8px 0;}
+.regbox .form li input[type="text"], .regbox .form li input[type="password"]{width: 177px;height: 25px;line-height: 25px;border: 1px solid #CCC;}
+.regbox .form li label {line-height: 34px;width: 80px;color: #111;}
+.regbox .form li.label {padding-left: 87px;}
+.regbox .form li.agree ul li label,.regbox .form li.agree ul li a {line-height: 22px;} 
+.leftside .stepbox{width: 267px;overflow: hidden;}
+.leftside .stepbox h4.step {color: #f27b03;border-bottom: 1px solid #f27b03;}
+.steppic{background: url(images/step.png) left top no-repeat;width: 201px;height: 271px;margin-top: 20px;margin-left: 40px;}
+.rightside .ansbox{margin-left: 19px;width: 602px;}
+.footer{float: left;width: 100%;border-top: 1px solid #ddd;margin-top: 30px;padding: 12px 0;clear: both;font-family: arial;}
+.footer p{text-align: center;line-height: 21px;}
+.footer p a {margin-right:5px;}
+.addtime {text-align: center;margin-top: 10px;}
+.newsdetail {padding: 30px 10px 0;line-height: 2em;}
+.newsdetail p{text-indent: 22px;}
+/*video*/
+.videoleft {border: none;width: 200px;}
+.videoright {width: 700px;border: none;}
+.video {margin-top: 17px;background: #f7f7f7;border: 2px solid #ddd;padding: 5px;}
+.video h6 {font-size: 14px;color: #356aa0;padding-left: 10px;margin-bottom: 5px;}
+.videobar {margin: 15px 0 0 20px;}
+.videobar h2 {background-position: -180px -320px ;height: 18px;font-size: 14px;color: #414141;padding-left: 25px;}
+.videobar ul {margin: 10px 0 0 25px;}
+.videobar ul li {height: 22px;line-height: 22px;margin-bottom: 5px;}
+.videobar ul li.current a{color: #f60;}
+.videobar ul li a{font-size: 14px;text-decoration:underline;}
+/*formvalidator*/
+samp.onShow,samp.onFocus,samp.onError,samp.onCorrect,samp.onLoad{display:-moz-inline-stack;display:inline-block;zoom: 1;*display: inline;padding-left: 25px;font-size: 12px;line-height:22px;vertical-align:middle;margin-left: 10px;}
+.onShow{background:url(images/val.png) left top no-repeat;}
+.onFocus{background: url(images/val.png) left -57px no-repeat;}
+.onError{background: url(images/val.png) left -29px no-repeat;}
+.onCorrect{background: url(images/val.png) left -86px no-repeat;}
+/*tipbox*/
+.tipbox {width: 614px;margin: 0 auto;border: 1px solid #d5d5d5;overflow: hidden;}
+.butpart {text-align: center;background: #eaeaea;padding: 21px 0;}
+.contactUs {width: 470px;margin: 30px auto 20px;}
+.contactUs dt {border-bottom: 1px solid #ddd;font-size: 14px;padding: 3px 0;}
+.contactUs dd li.first {margin-right: 40px;}
+.contactUs dd li.first span{font-size: 16px;font-weight: bold;color: #346ba3;}
+.contactUs dd li{height: 40px;line-height: 40px;}
+.contactUs dd li img {vertical-align: middle;}
+.succeed {padding: 30px 100px 0 70px;position: relative;width: 500px;}
+.succeed h3 {color: #ff7302;font-size: 16px;margin-bottom: 10px;}
+.succeed s {background: url(images/ico.png) left -98px no-repeat;height: 32px;left: 30px;position: absolute;top: 19px;width: 32px;}
+.gomail h3 {color: #808080;}
+.gomail s{background-position: -54px -98px;}
+.reserveinfo {padding: 30px 20px;}
+.reserveinfo h3{border-bottom: none;}
+p.userinfo {color: #f60;text-align: center;text-decoration:underline;font-size: 14px;font-weight: bold;margin:10px 0 20px;}
+.agreement {color: #414141;}
+.agreement .newsdetail {padding-top: 10px;}
+.agreement h2{font-size: 14px;margin: 25px 0 10px;}
+.agreement p {font-size: 14px;text-indent: 0;}
+/*siteCrumbs */
+.siteCrumbs li{position: relative;float: left;margin-right:5px;display:inline;line-height: 26px;height:26px;}
+.siteCrumbs a,.siteCrumbs a:visited,.list-item a,.list-item a:visited{color:#4485d9;}
+.siteCrumbs a:hover,.list-item a:hover{color:#f60;}
+.siteCrumbs a:active,.list-item a:active{color:#999;}
+.protit{
+	color:#414141;
+	padding-bottom: 5px;
+	margin: 10px 0;
+}
+.detail-img,.detail-info{
+	float:left;
+	overflow:hidden;
+}
+.detail-info {
+	width:480px;
+	margin-top: 10px;
+}
+.detail-info li{
+	color: #333;
+}
+.detail-info li label{
+	color: #666;
+}
+.detail-img{
+	width: 230px;
+	margin: 10px 20px 0 100px;
+}
+.pro-img{
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+.pro-img img{
+	width: 208px;
+	height: 208px;
+}
+.fav-pro{
+	float: left;
+	position: relative;
+	margin: 10px 0 0 55px;
+	display: block;
+	padding-left: 32px;
+	overflow: hidden;
+	width: 64px;
+	height: 23px;
+	line-height: 23px;
+}
+.recom_icon{
+	margin-top:10px;
+	height: 16px;
+}
+.recom_icon span{
+	float: left;
+}
+.recom_icon li {
+    color: #666666;
+    float: left;
+}
+.recom_icon li a {
+    background: url(images/fenx_pic.png) left top no-repeat;
+    display: inline-block;
+    height: 16px;
+    padding-left: 21px;
+    margin-top: 3px;
+}
+.recom_icon li a.renren {
+    background-position: left -38px;
+}
+.recom_icon li a.qzone {
+    background-position: left -64px;
+}
+.recom_icon li a.pengyou {
+    background-position: left -89px;
+}
+.recom_icon li a.qweibo {
+    background-position: left -116px;
+}
+.recom_icon li a.weibo {
+    background-position: left -142px;
+}
+.recom_icon li a.kaixin {
+    background-position: left -168px;
+}
+.detail-info .form li label{
+	width: 65px;
+}
+.formbg{
+	padding: 10px 0;
+	width:500px;
+	background: #fff8ef;
+	border: 1px solid #f2eac6;
+}
+.formbg li{}
+.detail-info .form li.label{
+	padding-left: 67px;
+}
+*+html .detail-info .form li.label{line-height:38px;}
+.form .price{
+	font-size: 18px;
+	padding-right: 3px;
+	color: #f60;
+	font-weight:bold;
+}
