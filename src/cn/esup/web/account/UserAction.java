@@ -22,21 +22,20 @@ import cn.esup.web.CrudActionSupport;
  * 用户管理Action.
  * 
  * 使用Struts2 convention-plugin annotation定义Action参数.
- * 演示带分页的管理界面.
  * 
  * @author calvin
  */
-//定义URL映射对应/account/user.action
+// 定义URL映射对应/account/user.action
 @Namespace("/account")
-//定义名为reload的result重定向到user.action, 其他result则按照convention默认.
-@Results({ @Result(name = CrudActionSupport.RELOAD, location = "user.action", type = "redirect") })
+// 定义名为reload的result重定向到user.action, 其他result则按照convention默认.
+@Results({@Result(name = CrudActionSupport.RELOAD, location = "user.action", type = "redirect")})
 public class UserAction extends CrudActionSupport<User> {
 
 	private static final long serialVersionUID = 8683878162525847072L;
 
 	private AccountManager accountManager;
 
-	//-- 页面属性 --//
+	// -- 页面属性 --//
 	private Long id;
 	private User entity;
 	private String ids;
@@ -44,10 +43,10 @@ public class UserAction extends CrudActionSupport<User> {
 	private int page;// jeasyui datagrid
 	private int rows;// jeasyui datagrid
 
-	//private Page<User> page = new Page<User>(5);//每页5条记录
-	private List<Long> checkedRoleIds; //页面中钩选的角色id列表
+	// private Page<User> page = new Page<User>(5);//每页5条记录
+	private List<Long> checkedRoleIds; // 页面中钩选的角色id列表
 
-	//-- ModelDriven 与 Preparable函数 --//
+	// -- ModelDriven 与 Preparable函数 --//
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -65,18 +64,19 @@ public class UserAction extends CrudActionSupport<User> {
 		}
 	}
 
-	//-- CRUD Action 函数 --//
+	// -- CRUD Action 函数 --//
 	@Override
 	public String list() throws Exception {
-		//	List<PropertyFilter> filters = PropertyFilter.buildFromHttpRequest(Struts2Utils.getRequest());
+		// List<PropertyFilter> filters =
+		// PropertyFilter.buildFromHttpRequest(Struts2Utils.getRequest());
 
-		//	设置默认排序方式
-		//	if (!page.isOrderBySetted()) {
-		//		page.setOrderBy("id");
-		//		page.setOrder(Page.ASC);
-		//	}
+		// 设置默认排序方式
+		// if (!page.isOrderBySetted()) {
+		// page.setOrderBy("id");
+		// page.setOrder(Page.ASC);
+		// }
 
-		//	page = accountManager.searchUser(page, filters);
+		// page = accountManager.searchUser(page, filters);
 
 		// 将主表对象主键作为子表对象的分页查询条件（Long typeId）
 		AjaxResponse.ajaxResp(accountManager.queryUserGridView(id, query, page, rows));
@@ -91,8 +91,9 @@ public class UserAction extends CrudActionSupport<User> {
 
 	@Override
 	public String save() throws Exception {
-		//根据页面上的checkbox选择 整合User的Roles Set
-		//	HibernateUtils.mergeByCheckedIds(entity.getRoleList(), checkedRoleIds, Role.class);
+		// 根据页面上的checkbox选择 整合User的Roles Set
+		// HibernateUtils.mergeByCheckedIds(entity.getRoleList(),
+		// checkedRoleIds, Role.class);
 
 		if (entity.getStatus() == null) {// 前台注册人员须要等待后台管理用户激活账户
 			entity.setStatus("0");
@@ -115,7 +116,8 @@ public class UserAction extends CrudActionSupport<User> {
 	public String delete() throws Exception {
 		try {
 			accountManager.deleteUser(id);
-		} catch (ServiceException e) {
+		}
+		catch (ServiceException e) {
 			logger.error(e.getMessage(), e);
 		}
 		AjaxResponse.ajaxResp(true);
@@ -128,28 +130,28 @@ public class UserAction extends CrudActionSupport<User> {
 		return null;
 	}
 
-	//-- 其他Action函数 --//
+	// -- 其他Action函数 --//
 	/**
 	 * 支持使用Jquery.validate Ajax检验用户名是否重复.
 	 */
 	public String checkLoginName() throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String newLoginName = request.getParameter("loginName");
-		//	String oldLoginName = request.getParameter("oldLoginName");
+		// String oldLoginName = request.getParameter("oldLoginName");
 
-		//	if (accountManager.isLoginNameUnique(newLoginName, oldLoginName)) {
-		//		Struts2Utils.renderText("true");
-		//	} else {
-		//		Struts2Utils.renderText("false");
-		//	}
+		// if (accountManager.isLoginNameUnique(newLoginName, oldLoginName)) {
+		// Struts2Utils.renderText("true");
+		// } else {
+		// Struts2Utils.renderText("false");
+		// }
 
 		AjaxResponse.ajaxResp(accountManager.isLoginNameUnique(newLoginName, null));
 
-		//因为直接输出内容而不经过jsp,因此返回null.
+		// 因为直接输出内容而不经过jsp,因此返回null.
 		return null;
 	}
 
-	/** 通过用户主键查询用户  */
+	/** 通过用户主键查询用户 */
 	public String queryUserById() throws Exception {
 		AjaxResponse.ajaxResp(accountManager.getUser(id));
 		return null;
@@ -162,13 +164,13 @@ public class UserAction extends CrudActionSupport<User> {
 		return null;
 	}
 
-	//-- 页面属性访问函数 --//
+	// -- 页面属性访问函数 --//
 	/**
 	 * list页面显示用户分页列表.
 	 */
-	//	public Page<User> getPage() {
-	//		return page;
-	//	}
+	// public Page<User> getPage() {
+	// return page;
+	// }
 
 	public String getIds() {
 		return ids;
